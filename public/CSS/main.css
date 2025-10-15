@@ -1,7 +1,7 @@
 body {
     font-family: "Italiana", sans-serif;
     font-weight: 400;
-    font-style: bold;
+    font-style: normal;
     margin: 0;
     padding: 0;
     background-color: #F8F8F8;
@@ -60,7 +60,6 @@ body {
 
 .about-text p {
     max-width: 800px;
-    ;
     align-items: center;
     justify-content: center;
     font-size: 40px;
