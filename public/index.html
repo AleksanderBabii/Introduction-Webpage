@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="./CSS/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <!--Intro Section-->
@@ -22,7 +25,7 @@
 
         <!-- about img -->
         <div class="about-image">
-            <img src="./images/profile-picture.jpg" alt="Profile Picture">
+            <img src="./images/ProfPicture.jfif" alt="Profile Picture">
         </div>
     </div>
 
@@ -56,7 +59,7 @@
                 <span class="tooltip">Web Development</span>
                 <p>
                     Experienced in building responsive, user-friendly websites and web applications.
-                    Skilled in front-end and back-end development, integrating modern frameworks, and ensuring optimal performance, accessibility, and scalability.
+                    Skilled in front-end, integrating modern frameworks, and ensuring optimal performance, accessibility, and scalability.
                 </p>
             </div>
 
@@ -84,43 +87,76 @@
 
 <!-- Projects Section -->
     <!--Carousel-->
-    <div class="carousel">
+    <div class="carousel-container">
   
         <h2 class="projects-header">Projects</h2>
         
-        <div class="carousel-track">
-            <div class="carousel-slide">
-                <a href="https://tindog-webpage.onrender.com/">
+        <div class="carousel-track-container">
+            <ul class="carousel-track">
+                <li class="carousel-slide current-slide">
+                    <a href="https://tindog-webpage.onrender.com/">
                     <img src="./images/tindog.PNG">
-                </a>
-            </div>
-            <div class="carousel-slide">
-                <a href="https://move-it-start-up-webpage.onrender.com">
-                    <img src="./images/moveit.PNG">
-                </a>
-            </div>
-            <div class="carousel-slide">
-                <a href="https://blog-webpage-5ixx.onrender.com">
-                    <img src="images/MyBlog.PNG">
-                </a>
-            </div>
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://move-it-start-up-webpage.onrender.com">
+                        <img src="./images/moveit.PNG">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://blog-webpage-5ixx.onrender.com">
+                        <img src="images/MyBlog.PNG">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://lexrift.itch.io/simon-game">
+                        <img src="images/SimonGame.png">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://lexrift.itch.io/drum-kit">
+                        <img src="images/DrumKit.png">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://lexrift.itch.io/jar">
+                        <img src="images/JAR.png">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://weather-broadcast-webpage.onrender.com/">
+                        <img src="images/WeatherBroadcast.png">
+                    </a>
+                </li>
+                <li class="carousel-slide">
+                    <a href="https://im-bored-webpage.onrender.com/">
+                        <img src="images/BoredWebpage.png">
+                    </a>
+                </li>
+            </ul>              
         </div>
+            
 
-        <button class="carousel-button prev">&#10094;</button>
-        <button class="carousel-button next">&#10095;</button>
+        <button class="carousel-button-left">&#8249;</button>
+        <button class="carousel-button-right">&#8250;</button>
 
-        <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
         </div>
     </div>
 
 <!-- Contact section-->
-    <div class="contact">
+    <div class="contact-header">
         <h1>Get In touch</h1>
         <p>If you like creating masterpieces as much as I do: </p>
-        <div class="button">
+        <div id="contact-button">
             <button onclick="window.location.href='mailto:sasha.babiy70@gmail.com';">Contact Me</button>
         </div>
 
@@ -131,6 +167,8 @@
         <p>&copy; 2025 Alex Introduction Webpage. All rights reserved.</p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="./src/main.js"></script>
 
 </body>

@@ -1,56 +1,357 @@
 body {
-    
-    font-family: "Italiana", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 50px;
-    padding: 0;
-    background-color: #F8F8F8;
-    
-
+  font-weight: 400;
+  font-style: normal;
+  margin: 50px;
+  padding: 0;
+  background-color: #b6c6b2;
 }
-
+/* About Container */
 .about-container {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 1fr;
-    gap: 15rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
 }
-    .about-image > img {
-        height:750px;
-        width: 750px;
-        border: groove;
-    }
-    .intro{
-        font-size:50px;
-        margin-left:5rem;
-        
-    }
-        h1,p{
-            text-align:center;
-        }
+.about-image > img {
+  height: 750px;
+  width: 750px;
+  border: groove;
+}
+.intro {
+  font-size: 50px;
+  margin-left: 5rem;
+}
+.intro > h1 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+.intro > p {
+  font-family: "Playfair", serif;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
 
-.skills-container {
-    display: inline-grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2,auto);
+/* Skills Container */
+
+.skills-container > .skills-header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  font-size: 75px;
+  text-align: center;
+  place-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+.skills > img {
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+  margin-left: 2%;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.skills > p,
+.tooltip {
+  width: 65%;
+  height: 75%;
+  margin-left: 35%;
+  top: -370px;
+  position: relative;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 40px;
+  font-family: "Playfair", serif;
+}
+.tooltip {
+  left: -350px;
+  font-size: 60px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Projects Container */
+.projects-header {
+  font-size: 75px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Container for the entire carousel */
+.carousel-container {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Track for the slides */
+.carousel-track-container {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Make the slides move horizontally */
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+}
+
+/* Individual slide styling */
+.carousel-slide {
+  flex: 0 0 auto; /* Ensure slides do not shrink or grow */
+  width: 100%;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation buttons */
+.carousel-button-left,
+.carousel-button-right {
+  position: absolute; 
+  top: 57%; 
+  transform: translateY(-50%); 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 10rem; 
+  background-color: none ;
+  color:#e7a14b;
+  
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+.carousel-button-right {
+  right: 10px;
+}
+.carousel-button-left:hover,
+.carousel-button-right:hover {
+  color: #1e4e50;
+}
+/* Navigation indicators (dots) */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #1e4e50;
+  border:none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+  background-color:#f8f5f1;
+}
+.carousel-indicator:hover {
+  background-color: #e7a14b;
+}
+
+/* Contact Section */
+.contact-header {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 25rem;
+  margin-bottom: 25rem;;
+}
+.contact-info {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Playfair", serif;
+  margin-bottom: 10rem;
+}
+.contact-info > a {
+  text-decoration: none;
+  color: black;
+}
+.contact-info > a:hover {
+  text-decoration: underline;
+}
+#contact-button > button {
+  background-color: #1e4e50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+#contact-button >
+ button:hover {
+  background-color: #e7a14b;
+  color: black;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Playfair", serif;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  .about-image > img {
     width: 100%;
-}
-    .skills-container > .skills-header {
-        grid-column-start: 1;
-        grid-column-end: -1;
-        font-size: 50px;
-        text-align: center;
-        place-items: center;
-    }
-    .skills> img{
-        border-radius:50%;
-        width:40%;
-    }
-    skills>p{
-        font-size:50px;
-    }
-
-
+    height: auto;
+  }
+  .intro {
+    margin-left: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+  .skills > img {
+    width: 50%;
+    height: auto;
     
+  }
 
+  .skills-container > .skills-header {
+    font-size: 50px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .skills {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .skills > p,
+  .tooltip {
+    width: 80%;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    text-align: center;
+  }
+  .projects-header {
+    font-size: 50px;
+  }
+  .carousel-container {
+    width: 100%;
+  }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+  .about-image > img {
+    width: 100%;
+    height: auto;
+
+  }
+  .intro {
+    font-size: 40px;
+    margin-left: 2rem;
+
+  }
+  .skills {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 5rem;
+  }
+  .skills-container > .skills-header {
+    font-size: 60px;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+    
+  }
+
+  .skills > img {
+    width: 40%;
+    height: auto;
+
+  }
+  .skills > p,
+  .tooltip {
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .projects-header {
+    font-size: 60px;
+  }
+}
+ 
+@media (min-width:1025px) and (max-width:1280px) {
+  .about-image > img {
+    width: 80%;
+    height: auto;
+
+  }
+  .intro {
+    font-size: 45px;
+    margin-left: 3rem;
+
+  }
+  .skills {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 7rem;
+  }
+  .skills-container > .skills-header {
+    font-size: 70px;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+    left: 50%;
+    
+  }
+  .skills > img {
+    width: 45%;
+    height: auto;
+
+  }
+  .skills > p,
+  .tooltip {
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    font-size: 35px;
+    text-align: center;
+  }
+  .projects-header {
+    font-size: 65px;
+  }
+}
