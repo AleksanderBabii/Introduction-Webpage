@@ -267,7 +267,7 @@ img:hover {
   }
 }
 
-@media (min-width:769px) and (max-width:1024px) {
+@media (min-width:769px) and (max-width:1280px) {
   .about-image > img {
     width: 100%;
     height: auto;
@@ -276,6 +276,12 @@ img:hover {
   .intro {
     font-size: 40px;
     margin-left: 2rem;
+
+  }
+  .intro > p {
+    width: 300%;
+    float: left;
+    text-align: left ;
 
   }
   .skills {
@@ -293,26 +299,31 @@ img:hover {
   }
 
   .skills > img {
-    width: 40%;
+    width: 60%;
     height: auto;
-
   }
+
   .skills > p,
   .tooltip {
     width: 100%;
-    margin-left: 0;
+    margin-left: -50%;
     top: 0;
     left: 0;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
   }
   
+  .skills > p {
+    margin-left: 200%;
+    top: -200px;
+  }
   .projects-header {
     font-size: 60px;
   }
 }
- 
+
 @media (min-width:1025px) and (max-width:1280px) {
+ 
   .about-image > img {
     width: 80%;
     height: auto;
