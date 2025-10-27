@@ -217,7 +217,7 @@ img:hover {
 
 /* Responsiveness */
 
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width:1280px) {
   .about-container {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
@@ -267,102 +267,4 @@ img:hover {
   }
 }
 
-@media (min-width:769px) and (max-width:1280px) {
-  .about-image > img {
-    width: 100%;
-    height: auto;
 
-  }
-  .intro {
-    font-size: 40px;
-    margin-left: 2rem;
-
-  }
-  .intro > p {
-    width: 300%;
-    float: left;
-    text-align: left ;
-
-  }
-  .skills {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 5rem;
-  }
-  .skills-container > .skills-header {
-    font-size: 60px;
-    margin-bottom: 7rem;
-    margin-top: 7rem;
-    
-  }
-
-  .skills > img {
-    width: 60%;
-    height: auto;
-  }
-
-  .skills > p,
-  .tooltip {
-    width: 100%;
-    margin-left: -50%;
-    top: 0;
-    left: 0;
-    font-size: 30px;
-    text-align: left;
-  }
-  
-  .skills > p {
-    margin-left: 200%;
-    top: -200px;
-  }
-  .projects-header {
-    font-size: 60px;
-  }
-}
-
-@media (min-width:1025px) and (max-width:1280px) {
- 
-  .about-image > img {
-    width: 80%;
-    height: auto;
-
-  }
-  .intro {
-    font-size: 45px;
-    margin-left: 3rem;
-
-  }
-  .skills {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 7rem;
-  }
-  .skills-container > .skills-header {
-    font-size: 70px;
-    margin-bottom: 8rem;
-    margin-top: 8rem;
-    left: 50%;
-    
-  }
-  .skills > img {
-    width: 45%;
-    height: auto;
-
-  }
-  .skills > p,
-  .tooltip {
-    width: 100%;
-    margin-left: 0;
-    top: 0;
-    left: 0;
-    font-size: 35px;
-    text-align: center;
-  }
-  .projects-header {
-    font-size: 65px;
-  }
-}
