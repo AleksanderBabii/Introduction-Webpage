@@ -21,11 +21,11 @@ body {
   font-size: 50px;
   margin-left: 5rem;
 }
-.intro > h1 {
+.intro > .greetings {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
 }
-.intro > h2 {
+.intro > .name {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -82,17 +82,21 @@ img:hover {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
 }
-.project-instruction {
+.project-instruction > .instruction {
   text-align: center;
   font-size: 25px;
   font-family: "Playfair", serif;
   margin-top: 2rem;
 }
-.github-link > a {
+.github-link > a{
   text-decoration: none;
   font-size: 25px;
   color: black;
   text-decoration: underline;
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Playfair", serif;
 }
 .github-link > a:hover {
   text-decoration: underline;
