@@ -322,9 +322,9 @@ body {
   }
   .skills > img {
     width: 50%;
-    height: auto;
-    
+    margin-left: 0;
   }
+
 
   #skills-container > .skills-header {
     font-size: 50px;
@@ -352,6 +352,33 @@ body {
   }
   #carousel-container {
     width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .carousel-slide img {
+    width: 80%;
+    height: auto;
+  }
+
+  .carousel-button-left,
+  .carousel-button-right {
+    font-size: 5rem;
+    margin-top: -5%;
+
+  }
+  .contact-header {
+    font-size: 30px;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+
+
+  .contact-header > h1 {
+    font-size: 40px;
+    padding: 1rem;
+  }
+  .contact-info {
+    font-size: 25px;
   }
 }
 
