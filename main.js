@@ -1,9 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Carousel elements
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
   const nextButton = document.querySelector('.carousel-button-right');
   const prevButton = document.querySelector('.carousel-button-left');
   const navDots = Array.from(document.querySelectorAll('.carousel-indicator'));
+
+ // Select the top navigation container
+const navLinks = document.querySelector('.navigation-links');
+
+navLinks.addEventListener('click', (e) => {
+  // Only handle clicks on links
+  if (e.target.tagName === 'A') {
+    e.preventDefault();
+
+    const targetId = e.target.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+
+
 
   // Move a slide and update classes
   const moveToSlide = (currentSlide, targetSlide) => {
